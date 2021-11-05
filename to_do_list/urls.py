@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from TDL_APP1.views import home
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tdl1/', include('TDL_APP1.urls')),
+    path('', home, name='home'),
 ]

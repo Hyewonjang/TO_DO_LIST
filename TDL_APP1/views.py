@@ -38,7 +38,7 @@ class ContentDeleteView(DeleteView):
     model = Content_Article
     context_object_name = 'target_content'
     template_name = 'TDL_APP1/delete.html'
-    success_url = reverse_lazy('TDL_APP1:home')
+    success_url = reverse_lazy('home')
 
 class ContentListView(ListView):
     model = Content_Article
