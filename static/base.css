@@ -1,0 +1,17 @@
+.to_do_list_logo{
+    font-family: 'Lobster', cursive;
+}
+
+.to_do_list_footer_button{
+    font-size: .9rem;
+}
+
+.to_do_list_footer{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.to_do_list_header{
+    text-align: center;
+    margin: 0.5rem 0;
+}

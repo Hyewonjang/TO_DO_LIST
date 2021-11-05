@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div style="border-radius: 1rem; margin: 2rem; text-align: center">
+        <h1 style="font-family: 'Architects Daughter', cursive; font-size: 1.5em; font-weight: 500;">
+            [ Content List ]
+        </h1>
+
+        <div style="height: 300px">
+        {% if target_content_list %}
+            {% for target in target_content_list %}
+            <h4>
+                <a href="{% url 'TDL_APP1:detail' target.pk %}" style="color:gray; font-family: 'Nanum Pen Script', cursive; font-size: 1.1em; text-decoration-line: none;">
+                    {{target.title}}
+                </a>
+            </h4>
+            {% endfor %}
+        {% else %}
+        <div style="text-align: center; font-family: 'Architects Daughter', cursive; font-size: 0.8em;">
+            <h1 style="padding-top: 120px;"> No Contents Yet!</h1>
+        </div>
+        {% endif %}
+        </div>
+
+        <div>
+            <a href="{% url 'TDL_APP1:create' %}" class="btn btn-dark rounded-pill col-3 mt-3 mb-3">
+                Create
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

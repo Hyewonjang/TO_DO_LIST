@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div>
+    <div style="text-align: center; color: black; text-decoration-line: none;">
+      <h1>
+        {{target_content.title}}
+      </h1>
+
+        <p style="height:300px; padding:20px; margin:0px">
+          {{target_content.content}}  
+        </p>
+
+        <a href="{% url 'TDL_APP1:update' target_content.pk %}"
+        class="btn btn-primary rounded-pill col-3">
+          <div>Update</div>
+        </a>
+        <a href="{% url 'TDL_APP1:delete' target_content.pk %}"
+        class="btn btn-danger rounded-pill col-3">
+          <div>Delete</div>
+      </a>
+    </div>
+  </div>
+
+{% endblock %}
